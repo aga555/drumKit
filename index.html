@@ -6,9 +6,6 @@
   <title> drum kit</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
@@ -18,78 +15,63 @@
 </head>
 
 <body>
-  <div class="keys">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
-      <span class="sound"> clap</span>
-    </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
-      <span class="sound">hihat</span>
-    </div>
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
-      <span class="sound">kick</span>
-    </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
-      <span class="sound">openhat</span>
-    </div>
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
-      <span class="sound">boom</span>
-    </div>
-    <div data-key="72" class="key">
-      <kbd>H</kbd>
-      <span class="sound">ride</span>
-    </div>
-    <div data-key="74" class="key">
-      <kbd>J</kbd>
-      <span class="sound">snare</span>
-    </div>
-    <div data-key="75" class="key">
-      <kbd>K</kbd>
-      <span class="sound">tom</span>
-    </div>
-    <div data-key="76" class="key">
-      <kbd>L</kbd>
-      <span class="sound">tink</span>
-    </div>
-  </div>
+
+<div data-key="65" class="key">
+  <kbd>A</kbd>
+  <span class="sound"> clap</span>
+</div>
+<div data-key="83" class="key">
+  <kbd>S</kbd>
+  <span class="sound">hihat</span>
+</div>
+<div data-key="68" class="key">
+  <kbd>D</kbd>
+  <span class="sound">kick</span>
+</div>
+<div data-key="70" class="key">
+  <kbd>F</kbd>
+  <span class="sound">openhat</span>
+</div>
+<div data-key="71" class="key">
+  <kbd>G</kbd>
+  <span class="sound">boom</span>
+</div>
+<div data-key="72" class="key">
+  <kbd>H</kbd>
+  <span class="sound">ride</span>
+</div>
+<div data-key="74" class="key">
+  <kbd>J</kbd>
+  <span class="sound">snare</span>
+</div>
+<div data-key="75" class="key">
+  <kbd>K</kbd>
+  <span class="sound">tom</span>
+</div>
+<div data-key="76" class="key">
+  <kbd>L</kbd>
+  <span class="sound">tink</span>
+</div>
+
 <audio data-key="65" src="sounds/big-clap.wav"></audio>
-  <audio data-key="83" src="sounds/closed-hat.wav"></audio>
-  <audio data-key="68" src="sounds/basic-kick.wav"></audio>
-  <audio data-key="70" src="sounds/open-hat_G%23_major.wav"></audio>
-  <audio data-key="71" src="sounds/boom-hit.wav"></audio>
-  <audio data-key="72" src="sounds/209891__veiler__left-ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+<audio data-key="83" src="sounds/closed-hat.wav"></audio>
+<audio data-key="68" src="sounds/basic-kick.wav"></audio>
+<audio data-key="70" src="sounds/open-hat_G%23_major.wav"></audio>
+<audio data-key="71" src="sounds/boom-hit.wav"></audio>
+<audio data-key="72" src="sounds/209891__veiler__left-ride.wav"></audio>
+<audio data-key="74" src="sounds/snare.wav"></audio>
+<audio data-key="75" src="sounds/tom.wav"></audio>
+<audio data-key="76" src="sounds/tink.wav"></audio>
 
 
+<script>
+    window.addEventListener("keydown", function (e) {
 
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        console.log(audio)
+    });
 
-
-
-
-
-
-
-  <!-- Add your site or application content here -->
-
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-
+</script>
 
 
 </body>
