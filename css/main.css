@@ -8,6 +8,16 @@ html, body {
 body {
   background-image: url("../img/dj-4595492_1920.jpg");
 }
+header{
+  min-width: 10vh;
+  text-align: center;
+}
+
+h1 {
+font-size: 30px;
+  font-family: 'Sacramento', cursive;
+  color: #cccccc;
+}
 .keys{
   display: flex;
   justify-content: center;
